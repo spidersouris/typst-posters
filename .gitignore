@@ -1,0 +1,6 @@
+_*
+**/archive
+*.txt
+*.md
+*.docx
+!README.md

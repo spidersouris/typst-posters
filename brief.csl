@@ -132,7 +132,7 @@
   <macro name="volume">
     <choose>
       <if type="article-journal" match="any">
-        <text variable="volume" font-weight="bold" suffix=","/>
+        <text variable="volume" suffix=","/>
       </if>
       <else>
         <group delimiter=" ">
@@ -146,13 +146,14 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout vertical-align="sup" delimiter=",">
-      <text variable="citation-number"/>
+    <!-- <layout vertical-align="sup" delimiter=","> -->
+    <layout vertical-align="sup" prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number" font-weight="bold"/>
     </layout>
   </citation>
   <bibliography et-al-min="6" et-al-use-first="1" entry-spacing="0" line-spacing="2">
     <layout suffix=".">
-      <text variable="citation-number" suffix=". "/>
+      <text variable="citation-number" prefix="[" suffix="] " font-weight="bold"/>
       <group delimiter=" ">
         <text macro="author" suffix="."/>
         <text macro="container-title"/>
